@@ -20,4 +20,3 @@ for count in range(user_len):
 print("----------------------------------------")
 print("Your secure random password is:", generated_pass)
 print("----------------------------------------")
-
