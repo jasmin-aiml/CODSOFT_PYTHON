@@ -6,19 +6,19 @@ options_list = ["rock", "paper", "scissors"]
 print("Welcome to Rock, Paper, Scissors against the Computer!")
 
 while True:
-    my_turn = input("\nType your choice (rock/paper/scissors) or type 'quit' to end: ").lower()
-    
+    my_turn = input("\nType your choice (rock/paper/scissors) or 'quit': ").lower().strip()
+
     if my_turn == "quit":
         print("Thanks for playing my game! Goodbye.")
         break
-        
+
     if my_turn not in options_list:
-        print("That choice doesn't exist. Please spell it correctly.")
+        print("That choice doesn't exist. Please check your spelling.")
         continue
-        
+
     comp_turn = random.choice(options_list)
     print("Computer picked:", comp_turn)
-    
+
     # game rules check
     if my_turn == comp_turn:
         print("It's a draw! Try again.")
@@ -37,3 +37,5 @@ while True:
             print("Wow, you win! Scissors cuts paper.")
         else:
             print("You lose! Rock breaks scissors.")
+
+      
